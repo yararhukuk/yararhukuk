@@ -49,7 +49,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta name="generator" content="WordPress 6.9">
 <link rel="canonical" href="https://yararhukuk.github.io/yararhukuk/iletisim/">
 <link rel="shortlink" href="https://yararhukuk.github.io/yararhukuk/?p=10">
-</head>
+<link rel="icon" type="image/png" href="https://yararhukuk.github.io/yararhukuk/wp-content/uploads/fbrfg/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="https://yararhukuk.github.io/yararhukuk/wp-content/uploads/fbrfg/favicon.svg">
+<link rel="shortcut icon" href="https://yararhukuk.github.io/yararhukuk/wp-content/uploads/fbrfg/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://yararhukuk.github.io/yararhukuk/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="yarar.av.tr">
+<link rel="manifest" href="https://yararhukuk.github.io/yararhukuk/wp-content/uploads/fbrfg/site.webmanifest"></head>
 <body class="wp-singular page-template-default page page-id-10 wp-theme-yarar-tema">
 
 <header class="site-header">
@@ -249,7 +254,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                     Akasya Mah. 146. Sok. No:6 D:3<br>
                     31000 Antakya/Hatay
                 </p>
-                <a href="https://www.google.com/maps/dir//Akasya,+146.+Sk.+No:6,+31030+Antakya%2FHatay" target="_blank" rel="noopener" class="contact-link-text">
+                <a href="https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK_HERE" target="_blank" rel="noopener" class="contact-link-text">
                     Yol Tarifi Al →
                 </a>
             </div>
@@ -295,60 +300,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
         </main>
 </div>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Attorney",
-    "name": "Yarar Hukuk Bürosu",
-    "image": "", 
-    "@id": "https://yararhukuk.github.io/yararhukuk",
-    "url": "https://yararhukuk.github.io/yararhukuk",
-    "telephone": "+905061441134",
-    "email": "av.furkanyrr@gmail.com",
-    "priceRange": "₺₺",
-    "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Akasya Mah. 146. Sok. No:6 D:3",
-    "addressLocality": "Antakya",
-    "addressRegion": "Hatay",
-    "postalCode": "31000",
-    "addressCountry": "TR"
-    },
-    "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 36.2159,
-    "longitude": 36.1556
-    },
-    "openingHoursSpecification": [
-    {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-    },
-    {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "14:00"
-    }
-    ],
-    "founder": {
-    "@type": "Person",
-    "name": "Av. Furkan Yarar"
-    },
-    "foundingDate": "2018",
-    "identifier": {
-        "@type": "PropertyValue",
-        "name": "Hatay Barosu Sicil No",
-        "value": "3078"
-    },
-    "sameAs": [
-    "https://wa.me/905061441134"
-    ]
-}
-</script>
 
 <footer id="iletisim-footer" style="background: #0f172a; color: #ccc; padding: 3rem 10%; text-align: center; margin-top: auto;">
     <div class="logo" style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: bold;">YARAR <span style="color: #c29d59;">HUKUK</span></div>
@@ -413,4 +364,48 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 /* ]]> */
 </script>
 </body>
-</html>
+</html><html><div id="randevuModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="kapatModal()">×</span>
+    <h2 style="color:#0f172a; margin-bottom:1rem;">Randevu Talep Formu</h2>
+    
+    <form name="iletisim-formu" method="POST" netlify>
+
+        <input type="hidden" name="form-name" value="iletisim-formu">
+
+        <div class="form-group">
+            <label>Adınız Soyadınız:</label>
+            <input type="text" name="ad_soyad" required>
+        </div>
+        <div class="form-group">
+            <label>Telefon Numaranız:</label>
+            <input type="tel" name="telefon" required>
+        </div>
+        <div class="form-group">
+            <label>Konu / Mesajınız:</label>
+            <textarea name="mesaj" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">Randevu Talebi Gönder</button>
+        
+        </form>
+  </div>
+</div>
+
+<script>
+    // Modalı Açma Fonksiyonu
+    function acModal() {
+        document.getElementById("randevuModal").style.display = "block";
+    }
+
+    // Modalı Kapatma Fonksiyonu
+    function kapatModal() {
+        document.getElementById("randevuModal").style.display = "none";
+    }
+
+    // Pencere dışına tıklayınca kapat
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("randevuModal")) {
+            kapatModal();
+        }
+    }
+</script></html>
