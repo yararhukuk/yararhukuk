@@ -157,30 +157,34 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 </script>
 </body>
 </html><html><div id="randevuModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="kapatModal()">×</span>
-    <h2 style="color:#0f172a; margin-bottom:1rem;">Randevu Talep Formu</h2>
-    
-    <form name="randevu-modal-formu" method="POST" data-netlify="true">
-    
-    <input type="hidden" name="form-name" value="randevu-modal-formu">
-
-    <div class="form-group">
-        <label>Adınız Soyadınız:</label>
-        <input type="text" name="ad_soyad" required>
+    <div class="modal-content">
+        <span class="close-btn" onclick="kapatModal()">×</span>
+        <h2 style="color:#0f172a; margin-bottom:1rem;">Randevu Talep Formu</h2>
+        
+        <form name="randevu-modal-formu" method="POST" netlify>
+            
+            <input type="hidden" name="form-name" value="randevu-modal-formu">
+            
+            <div class="form-group">
+                <label>Adınız Soyadınız:</label>
+                <input type="text" name="ad_soyad" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Telefon Numaranız:</label>
+                <input type="tel" name="telefon" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Konu / Mesajınız:</label>
+                <textarea name="mesaj" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit-btn">Randevu Talebi Gönder</button>
+            
+        </form>
     </div>
-    <div class="form-group">
-        <label>Telefon Numaranız:</label>
-        <input type="tel" name="telefon" required>
     </div>
-    <div class="form-group">
-        <label>Konu / Mesajınız:</label>
-        <textarea name="mesaj" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="form-submit-btn">Randevu Talebi Gönder</button>
-</form>
-  </div>
-</div>
 
 <script>
     // Modalı Açma Fonksiyonu
@@ -193,7 +197,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
         document.getElementById("randevuModal").style.display = "none";
     }
 
-    // Pencere dışına (siyah alana) tıklayınca kapatma
+    // Pencere dışına tıklayınca kapat
     window.onclick = function(event) {
         if (event.target == document.getElementById("randevuModal")) {
             kapatModal();
